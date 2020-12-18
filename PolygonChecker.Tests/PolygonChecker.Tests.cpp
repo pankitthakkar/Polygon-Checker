@@ -107,4 +107,76 @@ namespace PolygonCheckerTests
 			Assert::AreEqual(EXPECTED, actual);
 		}
 	};
+
+	TEST_CLASS(TriangleInsideAngle)  // Dhyey Brijeshkumar Vaghela
+	{
+	public:
+
+		TEST_METHOD(T001_Sides_2_2_2_result_60_60_60)  // This test was written to prove that when the sides of the triangle are 2, 2 and 2. The respective angles will be 60, 60 and 60.
+
+		{
+			//Arrange
+			int side1 = 2;
+			int side2 = 2;
+			int side3 = 2;
+			float expectedalpha = 60;
+			float expectedbeta = 60;
+			float expectedgamma = 60;
+
+			// Act
+			float resultalpha = GiveAlpha(side1, side2, side3);
+			float resultbeta = GiveBeta(side1, side2, side3);
+			float resultgamma = GiveGamma(side1, side2, side3);
+
+			// Assert
+			Assert::AreEqual(expectedalpha, resultalpha);
+			Assert::AreEqual(expectedbeta, resultbeta);
+			Assert::AreEqual(expectedgamma, resultgamma);
+
+		}
+
+		TEST_METHOD(T002_printAngle_2_3_4_result_29_47_104) // This test was written to prove that when the sides of the triangle are 2, 3 and 4. The respective angles will be 29, 47 and 104.
+		{
+			// Arrange
+			int side1 = 2;
+			int side2 = 3;
+			int side3 = 4;
+			float expectedalpha = 28.955023;
+			float expectedbeta = 46.567463;
+			float expectedgamma = 104.477509;
+
+			// Act
+			float resultalpha = GiveAlpha(side1, side2, side3);
+			float resultbeta = GiveBeta(side1, side2, side3);
+			float resultgamma = GiveGamma(side1, side2, side3);
+
+			// Assert
+			Assert::AreEqual(expectedalpha, resultalpha);
+			Assert::AreEqual(expectedbeta, resultbeta);
+			Assert::AreEqual(expectedgamma, resultgamma);
+		}
+
+		TEST_METHOD(T003_printAngle_2_3_4_result_29_47_104) // This test was written to prove that when the sides of the triangle are 2, 3 and 4. The respective angles will be 41, 41 and 97.
+		{
+			// Arrange
+			int side1 = 2;
+			int side2 = 2;
+			int side3 = 3;
+			float expectedalpha = 41.409622;
+			float expectedbeta = 41.409622;
+			float expectedgamma = 97.180763;
+
+			// Act
+			float resultalpha = GiveAlpha(side1, side2, side3);
+			float resultbeta = GiveBeta(side1, side2, side3);
+			float resultgamma = GiveGamma(side1, side2, side3);
+
+			// Assert
+			Assert::AreEqual(expectedalpha, resultalpha);
+			Assert::AreEqual(expectedbeta, resultbeta);
+			Assert::AreEqual(expectedgamma, resultgamma);
+		}
+	};
 }
+
+
