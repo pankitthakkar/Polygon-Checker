@@ -2,6 +2,7 @@
 #include <stdbool.h>
 #include <math.h>
 #include "triangleSolver.h"
+#include"rectangleSolver.h"
 
 #pragma warning(disable : 4996)
 

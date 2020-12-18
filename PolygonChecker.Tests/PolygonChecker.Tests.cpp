@@ -9,6 +9,10 @@ extern "C" {
 #include "triangleSolver.h"
 }
 
+extern "C" {
+#include "rectangleSolver.h"
+}
+
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace PolygonCheckerTests
