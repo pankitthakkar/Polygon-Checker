@@ -1,3 +1,9 @@
+// Group Project
+// PolygonChecker
+// Arun Kumar Thulaseedharan Pillai, Dhyey Brijeshkumar Vaghela & Pankit Chandrakant Thakkar
+// CSCN71020 - Fall 2020
+// Professor David Allison
+
 #include <stdio.h>
 #include <stdbool.h>
 #include <math.h>
@@ -39,7 +45,7 @@ int* getTriangleSides(int* triangleSides) {
 }
 
 
-int main() {
+int main() { // Pankit Chandrakant Thakkar
     bool continueProgram = true;
 
     while (continueProgram) {
