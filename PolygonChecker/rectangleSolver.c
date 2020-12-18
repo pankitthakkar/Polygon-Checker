@@ -6,7 +6,7 @@
 
 #include"rectangleSolver.h"
 
-void RectangleSolver()
+void RectangleSolver() // Pankit Chandrakant Thakkar
 {
     int n = 0;
     point a, b, c, d;
@@ -33,35 +33,34 @@ void RectangleSolver()
     makeSides(a, b, c, d);
 }
 
-void pointsView(point p1, point p2, point p3, point p4) {
+void pointsView(point p1, point p2, point p3, point p4) { // Pankit Chandrakant Thakkar
     printf("\nThe entered coordinates are: \n");
     printf("(%d,%d), (%d,%d), (%d,%d), (%d,%d)\n", p1.x, p1.y, p2.x, p2.y, p3.x, p3.y, p4.x, p4.y);
 }
 
-
-int input(int n) {
+int input(int n) { // Pankit Chandrakant Thakkar
     scanf("%d", &n);
     return n;
 }
 
-int IsOrthogonal(point a, point b, point c) {
+int IsOrthogonal(point a, point b, point c) { // Arun Kumar Thulaseedharan Pillai
     return (b.x - a.x) * (b.x - c.x) + (b.y - a.y) * (b.y - c.y) == 0;
 }
 
-int IsRectangle(point a, point b, point c, point d) {
+int IsRectangle(point a, point b, point c, point d) { // Arun Kumar Thulaseedharan Pillai
     return
         IsOrthogonal(a, b, c) &&
         IsOrthogonal(b, c, d) &&
         IsOrthogonal(c, d, a);
 }
 
-int ok(point a, point b, point c, point d) {
+int ok(point a, point b, point c, point d) { // Arun Kumar Thulaseedharan Pillai
     return IsRectangle(a, b, c, d) ||
         IsRectangle(b, c, a, d) ||
         IsRectangle(c, a, b, d);
 }
 
-int makeSides(point p1, point p2, point p3, point p4) {
+int makeSides(point p1, point p2, point p3, point p4) { // Arun Kumar Thulaseedharan Pillai
     int k = ok(p1, p2, p3, p4);
 
     if (k) {

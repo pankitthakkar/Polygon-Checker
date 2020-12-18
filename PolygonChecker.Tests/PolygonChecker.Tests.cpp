@@ -20,7 +20,6 @@ namespace PolygonCheckerTests
 	TEST_CLASS(TypeOfTriangle) // Arun Kumar Thulaseedharan Pillai
 	{
 	public:
-
 		TEST_METHOD(T001_analyzeTriangle_2_2and2_EquilateralTriangle) // Equal numbers are written to test it for Equilateral Triangle
 		{
 			// Arrange

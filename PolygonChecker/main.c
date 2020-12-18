@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <math.h>
+#include "rectangleSolver.h"
 #include "triangleSolver.h"
-#include"rectangleSolver.h"
 
 #pragma warning(disable : 4996)
 
@@ -17,6 +17,7 @@ void printWelcome() {
 
 int printShapeMenu() {
     printf("\n1. Triangle\n");
+    printf("2. Rectangle \n");
     printf("0. Exit\n\n");
 
     int shapeChoice;
@@ -57,6 +58,11 @@ int main() {
             int triangleSides[3] = { 0, 0, 0 };
             int* triangleSidesPtr = getTriangleSides(triangleSides);
             analyzeTriangle(triangleSidesPtr[0], triangleSidesPtr[1], triangleSidesPtr[2]);
+            break;
+
+        case 2:
+            printf("\nRectangle selected.\n\n");
+            RectangleSolver();
             break;
 
         default:
