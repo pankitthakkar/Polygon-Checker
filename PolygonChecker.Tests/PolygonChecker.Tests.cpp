@@ -13,7 +13,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace PolygonCheckerTests
 {
-	TEST_CLASS(TypeOfTriangle)// Arun Kumar Thulaseedharan Pillai
+	TEST_CLASS(TypeOfTriangle) // Arun Kumar Thulaseedharan Pillai
 	{
 	public:
 

@@ -8,7 +8,7 @@
 
 #define PI 3.1415926535
 
-char* analyzeTriangle(int side1, int side2, int side3) {
+char* analyzeTriangle(int side1, int side2, int side3) { // Pankit Chandrakant Thakkar
 
     int a = side1, b = side2, c = side3;
     char* Equilateral = "Equilateral Triangle";
@@ -16,20 +16,23 @@ char* analyzeTriangle(int side1, int side2, int side3) {
     char* Isosceles = "Isosceles Triangle";
     char* NotATriangle = "Not a Triangle";
 
-    if (a + b > c && a + c > b && b + c > a)
+    if (a + b > c && a + c > b && b + c > a) // this is the most important condition for the formation of triangles
     {
         if (side1 == side2 && side1 == side3) {
             printf("\n%s\n\n", Equilateral);
+            printAngle(side1, side2, side3);
             return Equilateral;
         }
 
         else if ((side1 == side2 && side1 != side3) || (side1 == side3 && side1 != side2)) {
             printf("\n%s\n\n", Isosceles);
+            printAngle(side1, side2, side3);
             return Isosceles;
         }
 
         else {
             printf("\n%s\n\n", Scalene);
+            printAngle(side1, side2, side3);
             return Scalene;
         }
     }
@@ -40,7 +43,7 @@ char* analyzeTriangle(int side1, int side2, int side3) {
     }
 }
 
-void printAngle(int a1, int b1, int c1)
+void printAngle(int a1, int b1, int c1) // Dhyey Brijeshkumar Vaghela
 {
     printf("Angles of the triangle:\n");
 
@@ -57,7 +60,7 @@ void printAngle(int a1, int b1, int c1)
     printf("gamma: %f\n", gammavalue);
 }
 
-float GiveAlpha(float a, float b, float c) {
+float GiveAlpha(float a, float b, float c) { // Dhyey Brijeshkumar Vaghela
 
     float a2 = a * a;
     float b2 = b * b;
@@ -69,7 +72,7 @@ float GiveAlpha(float a, float b, float c) {
     return alpha;
 }
 
-float GiveBeta(float a, float b, float c) {
+float GiveBeta(float a, float b, float c) { // Dhyey Brijeshkumar Vaghela
 
     float a2 = a * a;
     float b2 = b * b;
@@ -82,7 +85,7 @@ float GiveBeta(float a, float b, float c) {
     return beta;
 }
 
-float GiveGamma(float a, float b, float c) {
+float GiveGamma(float a, float b, float c) { // Dhyey Brijeshkumar Vaghela
 
     float a2 = a * a;
     float b2 = b * b;
