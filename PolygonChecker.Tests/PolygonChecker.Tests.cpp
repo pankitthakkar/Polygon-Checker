@@ -180,6 +180,685 @@ namespace PolygonCheckerTests
 			Assert::AreEqual(expectedgamma, resultgamma);
 		}
 	};
+
+	TEST_CLASS(FourPoints) // Pankit Chandrakant Thakkar
+	{
+	public:
+		TEST_METHOD(T001_makeSides_3_5_6_5_3_7_6_7__Yes) // This will check if a rectangle is formed using these coordinates (3,5), (6,5), (3,7) and (6,7) in this order.
+		{
+			// Arrange
+			point p1, p2, p3, p4;
+
+			p1.x = 3;
+			p1.y = 5;
+
+			p2.x = 6;
+			p2.y = 5;
+
+			p3.x = 3;
+			p3.y = 7;
+
+			p4.x = 6;
+			p4.y = 7;
+
+			const int EXPECTED = 0;
+
+			// Act
+			int actual = makeSides(p1, p2, p3, p4);
+
+			// Assert
+			Assert::AreEqual(EXPECTED, actual);
+		}
+
+		TEST_METHOD(T002_makeSides_3_5_6_5_6_7_3_7__Yes) // This will check if a rectangle is formed using these coordinates (3,5), (6,5), (6,7) and (3,7) in this order.
+		{
+			// Arrange
+			point p1, p2, p3, p4;
+
+			p1.x = 3;
+			p1.y = 5;
+
+			p2.x = 6;
+			p2.y = 5;
+
+			p3.x = 6;
+			p3.y = 7;
+
+			p4.x = 3;
+			p4.y = 7;
+
+			const int EXPECTED = 0;
+
+			// Act
+			int actual = makeSides(p1, p2, p3, p4);
+
+			// Assert
+			Assert::AreEqual(EXPECTED, actual);
+		}
+
+		TEST_METHOD(T003_makeSides_3_5_3_7_6_7_6_5__Yes) // This will check if a rectangle is formed using these coordinates (3,5), (3,7), (6,7) and (6,5) in this order.
+		{
+			// Arrange
+			point p1, p2, p3, p4;
+
+			p1.x = 3;
+			p1.y = 5;
+
+			p2.x = 3;
+			p2.y = 7;
+
+			p3.x = 6;
+			p3.y = 7;
+
+			p4.x = 6;
+			p4.y = 5;
+
+			const int EXPECTED = 0;
+
+			// Act
+			int actual = makeSides(p1, p2, p3, p4);
+
+			// Assert
+			Assert::AreEqual(EXPECTED, actual);
+		}
+
+		TEST_METHOD(T004_makeSides_3_5_3_7_6_5_6_7__Yes) // This will check if a rectangle is formed using these coordinates (3,5), (3,7), (6,5) and (6,7) in this order.
+		{
+			// Arrange
+			point p1, p2, p3, p4;
+
+			p1.x = 3;
+			p1.y = 5;
+
+			p2.x = 3;
+			p2.y = 7;
+
+			p3.x = 6;
+			p3.y = 5;
+
+			p4.x = 6;
+			p4.y = 7;
+
+			const int EXPECTED = 0;
+
+			// Act
+			int actual = makeSides(p1, p2, p3, p4);
+
+			// Assert
+			Assert::AreEqual(EXPECTED, actual);
+		}
+
+		TEST_METHOD(T005_makeSides_3_5_6_7_6_5_3_7__Yes) // This will check if a rectangle is formed using these coordinates (3,5), (6,7), (6,5) and (3,7) in this order.
+		{
+			// Arrange
+			point p1, p2, p3, p4;
+
+			p1.x = 3;
+			p1.y = 5;
+
+			p2.x = 6;
+			p2.y = 7;
+
+			p3.x = 6;
+			p3.y = 5;
+
+			p4.x = 3;
+			p4.y = 7;
+
+			const int EXPECTED = 0;
+
+			// Act
+			int actual = makeSides(p1, p2, p3, p4);
+
+			// Assert
+			Assert::AreEqual(EXPECTED, actual);
+		}
+
+		TEST_METHOD(T006_makeSides_3_5_6_7_3_7_6_5__Yes) // This will check if a rectangle is formed using these coordinates (3,5), (6,7), (3,7) and (6,5) in this order.
+		{
+			// Arrange
+			point p1, p2, p3, p4;
+
+			p1.x = 3;
+			p1.y = 5;
+
+			p2.x = 6;
+			p2.y = 7;
+
+			p3.x = 3;
+			p3.y = 7;
+
+			p4.x = 6;
+			p4.y = 5;
+
+			const int EXPECTED = 0;
+
+			// Act
+			int actual = makeSides(p1, p2, p3, p4);
+
+			// Assert
+			Assert::AreEqual(EXPECTED, actual);
+		}
+
+		TEST_METHOD(T007_makeSides_6_5_3_5_3_7_6_7__Yes) // This will check if a rectangle is formed using these coordinates (6,5), (3,5), (3,7) and (6,7) in this order.
+		{
+			// Arrange
+			point p1, p2, p3, p4;
+
+			p1.x = 6;
+			p1.y = 5;
+
+			p2.x = 3;
+			p2.y = 5;
+
+			p3.x = 3;
+			p3.y = 7;
+
+			p4.x = 6;
+			p4.y = 7;
+
+			const int EXPECTED = 0;
+
+			// Act
+			int actual = makeSides(p1, p2, p3, p4);
+
+			// Assert
+			Assert::AreEqual(EXPECTED, actual);
+		}
+
+		TEST_METHOD(T008_makeSides_6_5_3_5_6_7_3_7__Yes) // This will check if a rectangle is formed using these coordinates (6,5), (3,5), (6,7) and (3,7) in this order.
+		{
+			// Arrange
+			point p1, p2, p3, p4;
+
+			p1.x = 6;
+			p1.y = 5;
+
+			p2.x = 3;
+			p2.y = 5;
+
+			p3.x = 6;
+			p3.y = 7;
+
+			p4.x = 3;
+			p4.y = 7;
+
+			const int EXPECTED = 0;
+
+			// Act
+			int actual = makeSides(p1, p2, p3, p4);
+
+			// Assert
+			Assert::AreEqual(EXPECTED, actual);
+		}
+
+		TEST_METHOD(T009_makeSides_6_5_3_7_6_7_3_5__Yes) // This will check if a rectangle is formed using these coordinates (6,5), (3,7), (6,7) and (3,5) in this order.
+		{
+			// Arrange
+			point p1, p2, p3, p4;
+
+			p1.x = 6;
+			p1.y = 5;
+
+			p2.x = 3;
+			p2.y = 7;
+
+			p3.x = 6;
+			p3.y = 7;
+
+			p4.x = 3;
+			p4.y = 5;
+
+			const int EXPECTED = 0;
+
+			// Act
+			int actual = makeSides(p1, p2, p3, p4);
+
+			// Assert
+			Assert::AreEqual(EXPECTED, actual);
+		}
+
+		TEST_METHOD(T010_makeSides_6_5_3_7_3_5_6_7__Yes) // This will check if a rectangle is formed using these coordinates (6,5), (3,7), (3,5) and (6,7) in this order.
+		{
+			// Arrange
+			point p1, p2, p3, p4;
+
+			p1.x = 6;
+			p1.y = 5;
+
+			p2.x = 3;
+			p2.y = 7;
+
+			p3.x = 3;
+			p3.y = 5;
+
+			p4.x = 6;
+			p4.y = 7;
+
+			const int EXPECTED = 0;
+
+			// Act
+			int actual = makeSides(p1, p2, p3, p4);
+
+			// Assert
+			Assert::AreEqual(EXPECTED, actual);
+		}
+
+		TEST_METHOD(T011_makeSides_6_5_6_7_3_5_3_7__Yes) // This will check if a rectangle is formed using these coordinates (6,5), (6,7), (3,5) and (3,7) in this order.
+		{
+			// Arrange
+			point p1, p2, p3, p4;
+
+			p1.x = 6;
+			p1.y = 5;
+
+			p2.x = 6;
+			p2.y = 7;
+
+			p3.x = 3;
+			p3.y = 5;
+
+			p4.x = 3;
+			p4.y = 7;
+
+			const int EXPECTED = 0;
+
+			// Act
+			int actual = makeSides(p1, p2, p3, p4);
+
+			// Assert
+			Assert::AreEqual(EXPECTED, actual);
+		}
+
+		TEST_METHOD(T012_makeSides_6_5_6_7_3_7_3_5__Yes) // This will check if a rectangle is formed using these coordinates (6,5), (6,7), (3,7) and (3,5) in this order.
+		{
+			// Arrange
+			point p1, p2, p3, p4;
+
+			p1.x = 6;
+			p1.y = 5;
+
+			p2.x = 6;
+			p2.y = 7;
+
+			p3.x = 3;
+			p3.y = 7;
+
+			p4.x = 3;
+			p4.y = 5;
+
+			const int EXPECTED = 0;
+
+			// Act
+			int actual = makeSides(p1, p2, p3, p4);
+
+			// Assert
+			Assert::AreEqual(EXPECTED, actual);
+		}
+
+		TEST_METHOD(T013_makeSides_3_7_6_7_3_5_6_5__Yes) // This will check if a rectangle is formed using these coordinates (3,7), (6,7), (3,5) and (6,5) in this order.
+		{
+			// Arrange
+			point p1, p2, p3, p4;
+
+			p1.x = 3;
+			p1.y = 7;
+
+			p2.x = 6;
+			p2.y = 7;
+
+			p3.x = 3;
+			p3.y = 5;
+
+			p4.x = 6;
+			p4.y = 5;
+
+			const int EXPECTED = 0;
+
+			// Act
+			int actual = makeSides(p1, p2, p3, p4);
+
+			// Assert
+			Assert::AreEqual(EXPECTED, actual);
+		}
+
+		TEST_METHOD(T014_makeSides_3_7_6_7_6_5_3_5__Yes) // This will check if a rectangle is formed using these coordinates (3,7), (6,7), (6,5) and (3,5) in this order.
+		{
+			// Arrange
+			point p1, p2, p3, p4;
+
+			p1.x = 3;
+			p1.y = 7;
+
+			p2.x = 6;
+			p2.y = 7;
+
+			p3.x = 6;
+			p3.y = 5;
+
+			p4.x = 3;
+			p4.y = 5;
+
+			const int EXPECTED = 0;
+
+			// Act
+			int actual = makeSides(p1, p2, p3, p4);
+
+			// Assert
+			Assert::AreEqual(EXPECTED, actual);
+		}
+
+
+		TEST_METHOD(T015_makeSides_3_7_3_5_6_5_6_7__Yes) // This will check if a rectangle is formed using these coordinates (3,7), (3,5), (6,5) and (6,7) in this order.
+		{
+			// Arrange
+			point p1, p2, p3, p4;
+
+			p1.x = 3;
+			p1.y = 7;
+
+			p2.x = 3;
+			p2.y = 5;
+
+			p3.x = 6;
+			p3.y = 5;
+
+			p4.x = 6;
+			p4.y = 7;
+
+			const int EXPECTED = 0;
+
+			// Act
+			int actual = makeSides(p1, p2, p3, p4);
+
+			// Assert
+			Assert::AreEqual(EXPECTED, actual);
+		}
+
+		TEST_METHOD(T016_makeSides_3_7_3_5_6_7_6_5__Yes) // This will check if a rectangle is formed using these coordinates (3,7), (3,5), (6,7) and (6,5) in this order.
+		{
+			// Arrange
+			point p1, p2, p3, p4;
+
+			p1.x = 3;
+			p1.y = 7;
+
+			p2.x = 3;
+			p2.y = 5;
+
+			p3.x = 6;
+			p3.y = 7;
+
+			p4.x = 6;
+			p4.y = 5;
+
+			const int EXPECTED = 0;
+
+			// Act
+			int actual = makeSides(p1, p2, p3, p4);
+
+			// Assert
+			Assert::AreEqual(EXPECTED, actual);
+		}
+
+		TEST_METHOD(T017_makeSides_3_7_6_5_3_5_6_7__Yes) // This will check if a rectangle is formed using these coordinates (3,7), (6,5), (3,5) and (6,7) in this order.
+		{
+			// Arrange
+			point p1, p2, p3, p4;
+
+			p1.x = 3;
+			p1.y = 7;
+
+			p2.x = 6;
+			p2.y = 5;
+
+			p3.x = 3;
+			p3.y = 5;
+
+			p4.x = 6;
+			p4.y = 7;
+
+			const int EXPECTED = 0;
+
+			// Act
+			int actual = makeSides(p1, p2, p3, p4);
+
+			// Assert
+			Assert::AreEqual(EXPECTED, actual);
+		}
+
+		TEST_METHOD(T018_makeSides_3_7_6_5_6_7_3_5__Yes) // This will check if a rectangle is formed using these coordinates (3,7), (6,5), (6,7) and (3,5) in this order.
+		{
+			// Arrange
+			point p1, p2, p3, p4;
+
+			p1.x = 3;
+			p1.y = 7;
+
+			p2.x = 6;
+			p2.y = 5;
+
+			p3.x = 6;
+			p3.y = 7;
+
+			p4.x = 3;
+			p4.y = 5;
+
+			const int EXPECTED = 0;
+
+			// Act
+			int actual = makeSides(p1, p2, p3, p4);
+
+			// Assert
+			Assert::AreEqual(EXPECTED, actual);
+		}
+
+		TEST_METHOD(T019_makeSides_6_7_3_5_6_5_3_7__Yes) // This will check if a rectangle is formed using these coordinates (6,7), (3,5), (6,5) and (3,7) in this order.
+		{
+			// Arrange
+			point p1, p2, p3, p4;
+
+			p1.x = 6;
+			p1.y = 7;
+
+			p2.x = 3;
+			p2.y = 5;
+
+			p3.x = 6;
+			p3.y = 5;
+
+			p4.x = 3;
+			p4.y = 7;
+
+			const int EXPECTED = 0;
+
+			// Act
+			int actual = makeSides(p1, p2, p3, p4);
+
+			// Assert
+			Assert::AreEqual(EXPECTED, actual);
+		}
+
+		TEST_METHOD(T020_makeSides_6_7_3_5_3_7_6_5__Yes) // This will check if a rectangle is formed using these coordinates (6,7), (3,5), (3,7) and (6,5) in this order.
+		{
+			// Arrange
+			point p1, p2, p3, p4;
+
+			p1.x = 6;
+			p1.y = 7;
+
+			p2.x = 3;
+			p2.y = 5;
+
+			p3.x = 3;
+			p3.y = 7;
+
+			p4.x = 6;
+			p4.y = 5;
+
+			const int EXPECTED = 0;
+
+			// Act
+			int actual = makeSides(p1, p2, p3, p4);
+
+			// Assert
+			Assert::AreEqual(EXPECTED, actual);
+		}
+
+		TEST_METHOD(T021_makeSides_6_7_3_7_3_5_6_5__Yes) // This will check if a rectangle is formed using these coordinates (6,7), (3,7), (3,5) and (6,5) in this order.
+		{
+			// Arrange
+			point p1, p2, p3, p4;
+
+			p1.x = 6;
+			p1.y = 7;
+
+			p2.x = 3;
+			p2.y = 7;
+
+			p3.x = 3;
+			p3.y = 5;
+
+			p4.x = 6;
+			p4.y = 5;
+
+			const int EXPECTED = 0;
+
+			// Act
+			int actual = makeSides(p1, p2, p3, p4);
+
+			// Assert
+			Assert::AreEqual(EXPECTED, actual);
+		}
+
+		TEST_METHOD(T022_makeSides_6_7_3_7_6_5_3_5__Yes) // This will check if a rectangle is formed using these coordinates (6,7), (3,7), (6,5) and (3,5) in this order.
+		{
+			// Arrange
+			point p1, p2, p3, p4;
+
+			p1.x = 6;
+			p1.y = 7;
+
+			p2.x = 3;
+			p2.y = 7;
+
+			p3.x = 6;
+			p3.y = 5;
+
+			p4.x = 3;
+			p4.y = 5;
+
+			const int EXPECTED = 0;
+
+			// Act
+			int actual = makeSides(p1, p2, p3, p4);
+
+			// Assert
+			Assert::AreEqual(EXPECTED, actual);
+		}
+
+		TEST_METHOD(T023_makeSides_6_7_6_5_3_5_3_7__Yes) // This will check if a rectangle is formed using these coordinates (6,7), (6,5), (3,5) and (3,7) in this order.
+		{
+			// Arrange
+			point p1, p2, p3, p4;
+
+			p1.x = 6;
+			p1.y = 7;
+
+			p2.x = 6;
+			p2.y = 5;
+
+			p3.x = 3;
+			p3.y = 5;
+
+			p4.x = 3;
+			p4.y = 7;
+
+			const int EXPECTED = 0;
+
+			// Act
+			int actual = makeSides(p1, p2, p3, p4);
+
+			// Assert
+			Assert::AreEqual(EXPECTED, actual);
+		}
+
+		TEST_METHOD(T024_makeSides_6_7_6_5_3_7_3_5__Yes) // This will check if a rectangle is formed using these coordinates (6,7), (6,5), (3,7) and (3,5) in this order.
+		{
+			// Arrange
+			point p1, p2, p3, p4;
+
+			p1.x = 6;
+			p1.y = 7;
+
+			p2.x = 6;
+			p2.y = 5;
+
+			p3.x = 3;
+			p3.y = 7;
+
+			p4.x = 3;
+			p4.y = 5;
+
+			const int EXPECTED = 0;
+
+			// Act
+			int actual = makeSides(p1, p2, p3, p4);
+
+			// Assert
+			Assert::AreEqual(EXPECTED, actual);
+		}
+
+		TEST_METHOD(T025_makeSides_6_7_6_6_3_7_3_5__No) // This test will show that these coordinates ((6,7), (6,6), (3,7) and (3,5)) don't form a rectangle.
+		{
+			// Arrange
+			point p1, p2, p3, p4;
+
+			p1.x = 6;
+			p1.y = 7;
+
+			p2.x = 6;
+			p2.y = 6;
+
+			p3.x = 3;
+			p3.y = 7;
+
+			p4.x = 3;
+			p4.y = 5;
+
+			const int EXPECTED = 1;
+
+			// Act
+			int actual = makeSides(p1, p2, p3, p4);
+
+			// Assert
+			Assert::AreEqual(EXPECTED, actual);
+		}
+
+		TEST_METHOD(T026_makeSides_0_0_9_0_7_5_16_5__No) // This test will show that these coordinates ((0,0), (9,0), (7,5) and (16,5)) don't form a rectangle because it is a parallelogram.
+		{
+			// Arrange
+			point p1, p2, p3, p4;
+
+			p1.x = 0;
+			p1.y = 0;
+
+			p2.x = 9;
+			p2.y = 0;
+
+			p3.x = 7;
+			p3.y = 5;
+
+			p4.x = 16;
+			p4.y = 5;
+
+			const int EXPECTED = 1;
+
+			// Act
+			int actual = makeSides(p1, p2, p3, p4);
+
+			// Assert
+			Assert::AreEqual(EXPECTED, actual);
+		}
+	};
 }
-
-
